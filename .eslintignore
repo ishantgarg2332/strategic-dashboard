@@ -1,0 +1,10 @@
+/build/**
+/coverage/**
+/docs/**
+/jsdoc/**
+/tmp/**
+/dist/**
+/dist-release/**
+node_modules
+__tests__/*
+__mocks__/*

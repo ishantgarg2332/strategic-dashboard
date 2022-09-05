@@ -1,0 +1,75 @@
+{
+    "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+    },
+    "extends": [
+    "plugin:react/recommended",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+    "ecmaFeatures": {
+    "jsx": true,
+    "useJSXTextNode": true
+    },
+    "ecmaVersion": 12,
+    "requireConfigFile": false,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "import", "react-hooks", "@typescript-eslint", "jest"],
+    "settings": {
+    "import/resolver": {
+    "typescript": {}
+    }
+    },
+    "ignorePatterns": ["**/vendor/*.js"],
+    "rules": {
+    "@typescript-eslint/no-var-requires": 0,
+    "max-len": [2, 120, 4, {"ignoreUrls": true}],
+    // Indent JSX with 4 spaces
+    "react/jsx-indent": ["error", 2],
+    // Indent props with 4 spaces
+    "react/jsx-indent-props": ["error", 2],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never","js": "never", "jsx": "never" } ],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "no-console": "error",
+    "no-debugger": "error",
+    "jest/valid-expect": "error",
+    "no-unneeded-ternary": "error",
+    "padding-line-between-statements": [
+    "error",
+    {
+    "blankLine": "always",
+    "next": "*",
+    "prev": ["const", "let", "return", "var"]
+    },
+    {
+    "blankLine": "any",
+    "next": ["const", "let", "return", "var"],
+    "prev": ["const", "let", "return", "var"]
+    }
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-closing-bracket-location": [2, "tag-aligned"],
+    "react/jsx-first-prop-new-line": [2, "never"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-max-props-per-line": [2, {"maximum": 1, "when": "always"}],
+    "react/jsx-sort-props": "error",
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+    }
+    }
