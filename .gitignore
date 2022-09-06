@@ -4,9 +4,29 @@
 /node_modules
 /.pnp
 .pnp.js
-
+**/reports*json
+dist/
+jest/
+jest_ykmxi4/
+dist-release/
+dashboard/unit-testing
+.nyc_output
+.sass-cache
+*.map
+.idea
+*.log
+*.iml
+junitresults.xml
 # testing
 /coverage
+.sonar
+dashboard/sitespeed/
+dashboard/pa11y/coverage/
+dashboard/unit-testing/
+.gitpredict/
+docs/
+screenshots
+.vscode
 
 # production
 /build
