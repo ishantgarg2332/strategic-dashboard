@@ -13,6 +13,8 @@
       }
     },
     "rules": {
+      "no-console": ["error"],
+      "no-debugger": ["error"],
       "object-curly-spacing": ["warn", "always"],
       "no-unused-vars": [
         "warn",
@@ -37,15 +39,7 @@
           "ignoreRestArgs": true
         }
       ],
-      "max-len": [
-        "warn",
-        {
-          "code": 80,
-          "ignoreStrings": true,
-          "ignoreTemplateLiterals": true,
-          "ignoreComments": true
-        }
-      ],
+      "max-len": [2, 120, 4, {"ignoreUrls": true}],
       "no-plusplus": [
         "error",
         {
@@ -53,25 +47,41 @@
         }
       ],
       "react/jsx-key": "error",
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            "**/*.test.js",
-            "**/*.test.jsx",
-            "**/*.test.ts",
-            "**/*.test.tsx",
-            "src/tests/**/*"
-          ]
-        }
-      ],
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+      "react/jsx-indent": ["error", 2],
+      "react/jsx-indent-props": ["error", 2],
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": ["error"],
       "react/jsx-props-no-spreading": "off",
+      "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never","js": "never", "jsx": "never" } ],
       "import/prefer-default-export": "off",
       "react/jsx-boolean-value": "off",
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off",
       "react/jsx-one-expression-per-line": "off",
       "react/jsx-wrap-multilines": "off",
-      "react/destructuring-assignment": "off"
+      "react/destructuring-assignment": "off",
+      "padding-line-between-statements": [
+        "error",
+        {
+        "blankLine": "always",
+        "next": "*",
+        "prev": ["const", "let", "return", "var"]
+        },
+        {
+          "blankLine": "any",
+          "next": ["const", "let", "return", "var"],
+          "prev": ["const", "let", "return", "var"]
+          }
+      ],
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react/jsx-closing-bracket-location": [2, "tag-aligned"],
+      "react/jsx-first-prop-new-line": [2, "never"],
+      "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+      "react/jsx-max-props-per-line": [2, {"maximum": 1, "when": "always"}],
+      "react/jsx-sort-props": "error",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
     }
 }  
