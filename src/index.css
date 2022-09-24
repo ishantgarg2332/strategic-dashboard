@@ -73,7 +73,6 @@ code {
 }
 
 .site-layout-background {
-  background: #fff;
+  /* background: #fff; */
   height: 100vh;
 }
-

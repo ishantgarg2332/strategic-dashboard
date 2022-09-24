@@ -2,8 +2,7 @@ import { FunctionComponent } from 'react';
 import { Tabs } from 'antd'
 import AllCampaigns from '../All-Campaigns/All-Campaigns';
 import DraftedCampaigns from '../Drafted-Campaigns/Drafted-Campaigns';
-import NewCampaign from '../New-Campaign/New-Campaign';
-import { PlusCircleOutlined, MailOutlined, LineChartOutlined } from '@ant-design/icons'
+import { MailOutlined, LineChartOutlined } from '@ant-design/icons'
 import { LooseObject } from '../../globalTypes';
 import { StyledWrapper } from './Campaign.styled'
 
@@ -18,11 +17,6 @@ const campaignTabItems = [{
     label: 'Drafted Campaigns',
     key: 2,
     child: DraftedCampaigns
-},{
-    icon: PlusCircleOutlined,
-    label: 'New Campaign',
-    key: 3,
-    child: NewCampaign
 }];
 
 const Campaigns: FunctionComponent = () => {
